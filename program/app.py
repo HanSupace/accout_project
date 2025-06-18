@@ -8,23 +8,13 @@ import pydeck as pdk
 import os
 import streamlit as st
 
-st.title("📦 디버깅 모드")
+import os
+import streamlit as st
 
-# 현재 작업 디렉토리 출력
+st.title("📂 디버깅 도구")
 st.write("현재 작업 디렉토리:", os.getcwd())
-
-# 현재 디렉토리에 있는 파일들 출력
-st.write("현재 디렉토리의 파일 목록:", os.listdir("."))
-
-# model 파일 경로 확인
-MODEL_PATH = "stacked_model.pkl"
-if os.path.exists(MODEL_PATH):
-    st.success(f"✅ '{MODEL_PATH}' 파일이 존재합니다.")
-    import joblib
-    model = joblib.load(MODEL_PATH)
-    st.success("✅ 모델 로딩 성공!")
-else:
-    st.error(f"❌ '{MODEL_PATH}' 파일이 존재하지 않습니다.")
+st.write("파일 목록:", os.listdir(os.getcwd()))
+st.write("📁 program 내부 목록:", os.listdir("program"))
 
 
 model = joblib.load("program/stacked_model.pkl")
