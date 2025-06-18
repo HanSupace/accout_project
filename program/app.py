@@ -27,7 +27,7 @@ else:
     st.error(f"❌ '{MODEL_PATH}' 파일이 존재하지 않습니다.")
 
 
-model = joblib.load("stacked_model.pkl")
+model = joblib.load("program/stacked_model.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
 
 df = pd.read_excel("final.xlsx")
