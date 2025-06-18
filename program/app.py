@@ -23,7 +23,7 @@ feature_columns = joblib.load("program/feature_columns.pkl")
 df = pd.read_excel("program/final.xlsx")
 area_df = df[["district", "neighborhood"]].drop_duplicates()
 
-coords_df = pd.read_excel("xy.xlsx") 
+coords_df = pd.read_excel("program/xy.xlsx") 
 
 transformer = Transformer.from_crs("EPSG:5174", "EPSG:4326", always_xy=True)
 
