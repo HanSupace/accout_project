@@ -18,7 +18,7 @@ st.write("📁 program 내부 목록:", os.listdir("program"))
 
 
 model = joblib.load("program/stacked_model.pkl")
-feature_columns = joblib.load("feature_columns.pkl")
+feature_columns = joblib.load("program/feature_columns.pkl")
 
 df = pd.read_excel("final.xlsx")
 area_df = df[["district", "neighborhood"]].drop_duplicates()
