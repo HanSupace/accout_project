@@ -5,18 +5,6 @@ import joblib
 from pyproj import Transformer
 import pydeck as pdk
 
-import os
-import streamlit as st
-
-import os
-import streamlit as st
-
-st.title("📂 디버깅 도구")
-st.write("현재 작업 디렉토리:", os.getcwd())
-st.write("파일 목록:", os.listdir(os.getcwd()))
-st.write("📁 program 내부 목록:", os.listdir("program"))
-
-
 model = joblib.load("program/stacked_model.pkl")
 feature_columns = joblib.load("program/feature_columns.pkl")
 
